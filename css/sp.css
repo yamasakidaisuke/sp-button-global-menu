@@ -1,0 +1,20 @@
+/*@media screen and (max-width: 1024px) {*/
+	body {
+		margin: 0;
+		padding:0;
+	}
+	.sp-menu {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.sp-menu li {
+		list-style: none;
+		width: 25%;
+		height: 80px;
+		background: linear-gradient(#b7c3cf, #2d7acf ) ;
+		text-align: center;
+	}
+	.nav01 {
+		background-image: url(/img/menu/ico_hospital.png);
+    background-position: center 10px;
+	}
