@@ -1,4 +1,13 @@
-/*@media screen and (max-width: 1024px) {*/
+
+/*1024px以上は非表示*/
+@media screen and (min-width:1024px) {
+	.sp-menu {
+	display: none;
+	}
+}
+
+/*1023px以下は表示*/
+@media screen and (max-width:1023px) {
 	body {
 		margin: 0;
 		padding:0;
@@ -6,15 +15,45 @@
 	.sp-menu {
 		display: flex;
 		flex-wrap: wrap;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
 	}
 	.sp-menu li {
 		list-style: none;
 		width: 25%;
 		height: 80px;
-		background: linear-gradient(#b7c3cf, #2d7acf ) ;
+		background: linear-gradient(#F3F3DA, #A5CB0B ) ;
 		text-align: center;
+		position: relative;
+		z-index: 1; /* 必要であればリンク要素の重なりのベース順序指定 */
+		box-sizing: border-box;
+		padding-top: 5px;
+		border-top: 1px solid #614C3F;
+		border-left: 1px solid #614C3F;
+	}
+	.sp-menu li:nth-child(4),
+	.sp-menu li:nth-child(8) {
+		border-right: 1px solid #614C3F;
+	}
+	.sp-menu li:nth-child(n+5) {
+		border-bottom: 1px solid #614C3F;
+	}
+	.sp-menu li a {
+		position: absolute;
+		z-index: 2; /* 必要であればリンク要素の重なりのベース順序指定 */
+		top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
 	}
 	.nav01 {
 		background-image: url(../img/menu/ico_home.png);
-    background-position: center 10px;
+		background-position: center 10px;
 	}
+	.nav01 a{
+		position: absolute;
+	}
+}
