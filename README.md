@@ -1,5 +1,7 @@
 # sp-button-global-menu
 スマホでグローバルメニューボタンが現れる
+## 早速デモを見る
+https://yamasakidaisuke.github.io/sp-button-global-menu/
 ## 仕様
 * ４列☓2行の８つのボタンのみ対応
 	* 変更する場合は、CSSの調整が必要
